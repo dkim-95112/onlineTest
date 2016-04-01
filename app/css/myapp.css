@@ -12,3 +12,10 @@ body > .container {
 .navbar-inverse{
 	background-color: #003479;
 }
+#navbar {
+	padding-left: 60px;
+}
+a.navbar-brand{
+	padding: 2px 15px;
+	position: absolute;
+}
