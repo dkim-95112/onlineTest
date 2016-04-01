@@ -1,0 +1,26 @@
+{
+  "name": "myapp",
+  "authors": [
+    "David Kim <innerb@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dkim-95112/onlineTest",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3"
+  },
+  "private": true
+}

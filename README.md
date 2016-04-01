@@ -1,4 +1,4 @@
 # onlineTest
 
 ## To Run
-`node index.js`
+`npm start`
