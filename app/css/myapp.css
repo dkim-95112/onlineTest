@@ -1,4 +1,9 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(Artifika-Regular.ttf);
+}
 body {
+	font-family: myFirstFont;
 	background: #006593;
 }
 body > .navbar {
