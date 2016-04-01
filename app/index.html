@@ -30,8 +30,16 @@
   </head>
   <body>
 
-      <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div style="height:10px; position: relative; background: cyan; overflow: hidden">
+      <div style="position: absolute; height: 100%; width: 100%; margin-left:-75%; background: red">
+        <div style="position: absolute; height: 100%; width: 100%; margin-left: 150%; background: yellow  ">
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-inverse" ng-controller="MenuCtrl">
       <div class="container">
+
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -43,18 +51,24 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#/">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li ng-class="{active: isActive('/')}"><a href="#/">Home</a></li>
+            <li ng-class="{active: isActive('/about')}"><a href="#about">About</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-{{"hello " + "there"}}
-    <div class="container">
 
-      <div ng-view></div>
+      <div class="container" style="min-height: 400px; box-shadow: 0px -10px 10px 10px">
 
-    </div><!-- /.container -->
+        <div style="height:10px; background-color:grey"></div>
+        <div style="position: relative; height:50px; background-color:red">
+          <div style="height: 10px; width:100%; background: grey; position: absolute; bottom:0"></div>
+        </div>
 
+        <div ng-view style="padding:10px"></div>
+
+      </div><!-- /.container -->
+
+    <div style="height: 30px; background-color: blue"></div>
   </body>
 </html>

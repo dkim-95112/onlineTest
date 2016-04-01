@@ -9,10 +9,15 @@ var myApp = angular.module('myApp', [
 myApp.controller('HomeCtrl', ['$scope',
   function($scope) {
     $scope.name = 'HomeCtrl';
-    $scope.loremIpsum = 'loremIpsum'
-}]).controller('AboutCtrl', ['$scope',
-  function($scope) {
-    $scope.name = 'AboutCtrl';
+
+    $scope.loremIpsum = "Lorem ipsum dolor sit amet"
+
+}]).controller('MenuCtrl', ['$scope', '$location',
+  function($scope, $location) {
+    $scope.name = 'MenuCtrl';
+    $scope.isActive = function(path){
+    	return $location.path() == path;
+    }
 }]);
 
 myApp.config(['$routeProvider',
@@ -23,8 +28,7 @@ myApp.config(['$routeProvider',
         controller: 'HomeCtrl'
       }).
       when('/about', {
-        templateUrl: 'partials/about.html',
-        controller: 'AboutCtrl'
+        templateUrl: 'partials/about.html'
       }).
       otherwise({
         redirectTo: '/'
