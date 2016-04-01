@@ -1,5 +1,5 @@
 body {
-	background: lightblue;
+	background: #006593;
 }
 body > .navbar {
   margin-bottom: 0;
@@ -8,4 +8,7 @@ body > .navbar {
 }
 body > .container {
 	padding: 0;
+}
+.navbar-inverse{
+	background-color: #003479;
 }
